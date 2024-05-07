@@ -83,7 +83,7 @@ echo calculadora(53, 22);
 
 
 
-/* ejemplo 4 */
+/* ejemplo 4 funciones dentro de otras */
 
 
 function getNombre($name){
@@ -108,6 +108,14 @@ function devolNombre(){
 }
 
 echo devolNombre();
+
+
+
+
+
+
+
+
 
 
 ?>
