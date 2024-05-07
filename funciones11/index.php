@@ -42,12 +42,72 @@ games(function(){
 }) */
 
 
+/// -- argumentos y return
+
+function calculadora($num, $num2, $negrita = false){
+    $opeSum = ($num + $num2);
+    $opeRes = ($num - $num2);
+    $opeMul = ($num * $num2);
+    $opeDiv = ($num / $num2);
+
+    $cadenaTexto =  "";
 
 
-/// -- varios parametros / argumentos
+    if($negrita){
+        $cadenaTexto .= "<h1>";
+    }
+
+    /* el .= sirve para concatenar el resultado */
+
+    $cadenaTexto .= "suma: ".$opeSum."<br/>" ;
+    $cadenaTexto .= "resta: ".$opeRes."<br/>" ;
+    $cadenaTexto .= "multiplicacion: ".$opeMul."<br/>" ;
+    $cadenaTexto .= "division: ".$opeDiv."<br/>" ;
+    
+    if($negrita){
+        $cadenaTexto .= "<h1/>";
+    }
+
+
+    $cadenaTexto .= "<hr/>" ;
+
+    /* devolvemos el valor con el return */
+    return $cadenaTexto;
+}
+
+
+/* imprimimos el valor del return */
+echo calculadora(5, 2, true);
+echo calculadora(4, 52);
+echo calculadora(53, 22);
 
 
 
+/* ejemplo 4 */
+
+
+function getNombre($name){
+    $texto = "el nombre es $name";
+    return $texto; /* retorna la variable texto */
+}
+
+function getApellido($surname){
+    $texto = "el apellido es $surname";
+    return $texto;
+}
+
+function devolNombre(){
+
+    /* concatenamos una funcion dentro de un texto */
+    $texto = getNombre("nahuel")
+            ."<br/>".
+            getApellido("gomez");
+
+
+    return $texto;
+}
+
+echo devolNombre();
 
 
 ?>
