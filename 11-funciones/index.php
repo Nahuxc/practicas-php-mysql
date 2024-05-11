@@ -2,7 +2,7 @@
 
 //FUNCIONES  -- crear funciones 1 --
 
-/* una funcion es un conjunto de instrucciones agrupadas baja un nombre concereto y que pueden reutilizarse solamente invocando a la funcion tantas veces como queramos */
+/* una funcion es un conjunto de instrucciones agrupadas baja un nombre concreto y que pueden reutilizarse solamente invocando a la funcion tantas veces como queramos */
 
 function games($fn){ /* parametros en () */
 

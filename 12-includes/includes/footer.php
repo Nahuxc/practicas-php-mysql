@@ -1,0 +1,6 @@
+    <footer>
+        <h2>Pie de pagina</h2>
+    </footer>
+
+</body>
+</html>
