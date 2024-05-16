@@ -10,15 +10,30 @@
 */
 
 
-$numbers = [6,5,8,4,2,1,7,3]; /* array de numeros */
+$numbers = [6,5,8,4,2,7,1,3]; /* array de numeros */
+
+
+/* funcion para generar el array y mostrarlo */
+function getArray($numbers){
+
+    $resultado = ""; /* creamos un contenedor donde guardar todos nuestros datos del array */
+
+    foreach($numbers as $number){
+        /* usamos el .=  para que con cada iteracion concatene junto con lo anterior dentro del array */
+        $resultado .= $number."<br>"; /* output: array */
+    }
+
+    /* retornamos el resultado */
+    return $resultado;
+}
+
 
 echo "<hr>";
 echo "<h1>Array por defecto</h1>";
 
 /* recorremos y mostramos el array */
-foreach($numbers as $number){
-    echo $number; /* output: array */
-}
+ 
+echo getArray($numbers); /* mostramos el array */
 
 echo "<br>";
 
@@ -28,9 +43,7 @@ sort($numbers); /* array ordenado */
 echo "<hr>";
 echo "<h1>Array Ordenado</h1>";
 
-foreach($numbers as $number){
-    echo $number; /* output: array ordenado */
-}
+echo getArray($numbers); /* mostramos el array */
 
 echo "<br>";
 
@@ -44,10 +57,23 @@ echo "<br>";
 echo "<hr>";
 
 
-echo "<h1>Busqueda de objetos en el array</h1>";
+/* buscar numeros en el array */
 
-$search = array_search(2, $numbers); /* busca el numero 2 en el array ordenado */
+if(isset($_GET["numero"])){
 
-var_dump($search); /* en el indice 1 del array esta el 2  */
+    $numSearch = $_GET["numero"];
+    
+    echo "<h1>buscar en el array el numero $numSearch</h1>";
+    
+    if(array_search($numSearch, $numbers)){
+        echo "<p>el numero buscado existe en el array</p>";
+    }else{
+        echo "<p>no existe en el array</p>";
+    }
+
+}
+
+
+
 
 ?>
