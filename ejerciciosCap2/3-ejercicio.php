@@ -8,8 +8,18 @@ ejercicio 3: programa que compruebe si una variable esta vacia y si esta vacia, 
 */
 
 
+$variable = "";
 
 
+if(empty($variable)){
+    $variable .= "texto a rellenar";
+
+    echo "<strong>".strtoupper($variable)."</strong>";
+}else{
+    
+    echo "esta variable no esta vacia";
+
+}
 
 
 
