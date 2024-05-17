@@ -21,23 +21,23 @@
     <form action="procesar_formulario.php" method="POST">
 
         <label for="name">Name</label>
-        <input required pattern="[A-Za-z]+" type="text" name="name">
+        <input  type="text" name="name">
 
         <br>
 
         <label for="surname">Surname</label>
-        <input required pattern="[A-Za-z]+" type="text" name="surname">
+        <input  type="text" name="surname">
 
         <br>
 
         <label for="edad">edad</label>
-        <input required pattern="[0-9]+" type="number" name="edad">
+        <input  type="number" name="edad">
 
 
         <br>
 
         <label for="email">email</label>
-        <input required type="email" name="email">
+        <input  type="email" name="email">
 
         <br>
 

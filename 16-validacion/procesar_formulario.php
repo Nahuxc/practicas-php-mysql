@@ -8,11 +8,49 @@ if(!empty($_POST["name"]) && !empty($_POST["surname"]) && !empty($_POST["edad"])
 
     $name = $_POST["name"];
     $surname = $_POST["surname"];
-    $edad = $_POST["edad"];
+    $edad = (int) $_POST["edad"];
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-}else{
+    
+    /* validar nombre */
+
+    if(!is_string($name) || preg_match("/[0-9]/", $name)){
+        $error = "error Nombre";
+        
+    }
+
+    /* validar apellido */
+
+    if(!is_string($surname) || preg_match("/[0-9]/", $surname)){
+        $error = "error Apellido";
+        
+    }
+
+    /* validar edad */
+
+    if(!is_int($edad) || !filter_var($edad, FILTER_VALIDATE_INT)){
+        $error = "error edad";
+        
+    }
+    
+    /* validar EMAIL */
+
+    if(!is_string($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $error = "error email";
+       
+    }
+
+    /* VALIDAR PASSWORD */
+    if(empty($password) || strlen($password < 10)){
+        $error = "error password";
+        
+    }
+
+    var_dump($_POST);
+    var_dump($error);
+
+}else if($error != "ok"){
     $error = "faltan_valores";
     header("Location:index.php?error=$error");
 }
