@@ -1,25 +1,19 @@
 <?php
 
-/* variable de datos desde el formulario */
-$name="";
-$surname="";
-$edad="";
-$email="";
-$password="";
-
 $error;
 
-if(empty($_POST["name"]) && empty($_POST["surname"]) && empty($_POST["edad"]) && empty($_POST["email"]) &&  empty($_POST["password"])){
+if(!empty($_POST["name"]) && !empty($_POST["surname"]) && !empty($_POST["edad"]) && !empty($_POST["email"]) &&  !empty($_POST["password"])){
 
-    $name = (isset($_POST["name"])) ? $_POST["name"]: "";
-    $surname = (isset($_POST["surname"])) ? $_POST["surname"]: "";
-    $edad = (isset($_POST["edad"])) ? $_POST["edad"]: "";
-    $email = (isset($_POST["email"])) ? $_POST["email"]: "";
-    $password = (isset($_POST["password"])) ? $_POST["password"]: "";
+    $error = "ok";
 
+    $name = $_POST["name"];
+    $surname = $_POST["surname"];
+    $edad = $_POST["edad"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
 
 }else{
-    $error = "faltan valores";
+    $error = "faltan_valores";
     header("Location:index.php?error=$error");
 }
 
@@ -35,6 +29,14 @@ if(empty($_POST["name"]) && empty($_POST["surname"]) && empty($_POST["edad"]) &&
     <title>Validacion de Formularios</title>
 </head>
 <body>
+    <?php  if($error == "ok"): ?>
     
+        <h1>Datos Validados correctamente</h1>
+        <p>Nombre: <?=$name;?></p>
+        <p>Apellido: <?=$surname;?></p>
+        <p>Edad: <?=$edad;?></p>
+        <p>Email: <?=$email;?></p>
+    
+    <?php endif; ?>
 </body>
 </html>
