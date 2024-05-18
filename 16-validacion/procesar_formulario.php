@@ -16,37 +16,38 @@ if(!empty($_POST["name"]) && !empty($_POST["surname"]) && !empty($_POST["edad"])
     /* validar nombre */
 
     if(!is_string($name) || preg_match("/[0-9]/", $name)){
-        $error = "error Nombre";
-        
+        $error = "error nombre";
+        header("Location:index.php?error=$error");
     }
 
     /* validar apellido */
 
     if(!is_string($surname) || preg_match("/[0-9]/", $surname)){
-        $error = "error Apellido";
-        
+        $error = "error apellido";
+        header("Location:index.php?error=$error");
     }
 
     /* validar edad */
 
     if(!is_int($edad) || !filter_var($edad, FILTER_VALIDATE_INT)){
         $error = "error edad";
-        
+        header("Location:index.php?error=$error");
     }
     
     /* validar EMAIL */
 
     if(!is_string($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)){
         $error = "error email";
-       
+        header("Location:index.php?error=$error");
     }
 
     /* VALIDAR PASSWORD */
     if(empty($password) || strlen($password < 10)){
         $error = "error password";
-        
+        header("Location:index.php?error=$error");
     }
 
+    /* verificacion del envio de los datos y el estado del $error */
     var_dump($_POST);
     var_dump($error);
 

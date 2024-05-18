@@ -11,7 +11,7 @@
     <?php
         if(isset($_GET["error"])){
             $error = $_GET["error"];
-            if($error == "faltan_valores"){
+            if($error == "faltan_valores" || $error == "error nombre" || $error == "error apellido" || $error = "error edad" || $error == "error email" || $error == "error password" ){
                 echo "<h1>$error</h1>";
             }
         }
