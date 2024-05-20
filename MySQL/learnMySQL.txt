@@ -1,0 +1,38 @@
+Aprender en MySQL:
+
+- Tablas, tipos y restricciones
+- Diseñar base de datos
+- Insert, Update, Select y Delete
+- Funciones en SQL
+- Agrupamiento
+- Subconsultas
+- Multitabla y JOIN
+- Bloque De Ejercicios para practicar todos los conocimientos.
+
+
+* ¿Que es una base de datos? *
+- una base de datos es un conjunto de datos pertenecientes a un mismo contexto y almacenados sistematicamente para su posterior uso.
+
+
+* elementos que componen una base de datos *
+
+- Tablas --> representa una entidad.
+- Columnas --> representa los campos.
+- Filas --> representa una ocurrencia de la entidad el cual guarda sus datos del objeto de cada campo.
+
+ejemplo:
+
+DATABASE --> BLOG:
+
+- TABLA --> USUARIO --> //entidad usuario
+
+
+-  ID  - NOMBRE -    APELLIDO -      EMAIL     - CONTRASEÑA -
+-  1   - juan    -   gomez    - hash@gmail.com -   123546   -
+-  2   - feli    -   gomez    - kawe@gmail.com -   123546   -
+-  3   - pedro   -   gomez    - wert@gmail.com -   123546   -
+
+
+- cada columna representa cada atributo que va a tener esa entidad(Usuario).
+
+- cada fila representa un objeto de esa entidad(Usuario).

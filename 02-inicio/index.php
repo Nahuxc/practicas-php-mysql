@@ -1,4 +1,3 @@
-<!-- primer ejercicio -->
 
 <?php
 
