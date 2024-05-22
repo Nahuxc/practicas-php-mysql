@@ -9,6 +9,8 @@ Aprender en MySQL:
 - Multitabla y JOIN
 - Bloque De Ejercicios para practicar todos los conocimientos.
 
+// uso del programa Dia Diagram Editor
+
 
 * ¿Que es una base de datos? *
 - una base de datos es un conjunto de datos pertenecientes a un mismo contexto y almacenados sistematicamente para su posterior uso.
