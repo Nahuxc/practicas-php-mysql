@@ -29,3 +29,9 @@ ALTER TABLE usuarios_renom ADD CONSTRAINT uq_email UNIQUE(email); /* el unique i
 
 
 # BORRAR UNA COLUMNA #
+
+
+ALTER TABLE usuarios_renom DROP website;
+
+
+/* select * from usuarios ( el select * from) sirve para seleccionar todos los datos de la tabla y mostrarlos */
