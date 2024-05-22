@@ -1,6 +1,6 @@
 /* 
 
-/// COMANDOS PARA USAR EN EL CMD (anotacion) ///
+/// COMANDOS PARA USAR EN EL CMD (anotacion basica) ///
 
 show databases
 
@@ -61,7 +61,7 @@ drop "nombre de la tabla para eliminar"
     password    VARCHAR(255) not null
     CONSTRAINT pk_usuarios PRIMARY KEY(id)
 
-   /* restricciones de integridad 
+   /* restricciones de integridad
 
     - not null, significa que el campo nunca puede ser nulo
 
@@ -79,3 +79,15 @@ drop "nombre de la tabla para eliminar"
     /* indicando el tipo de dato y su maxima cantidad de caracteres estariamos creando una tabla con sus respectiva propiedades */
 
  )
+
+
+ /* tabla para usar sin los comentarios dentro */
+
+/*  CREATE TABLE usuarios(
+    id          INT(11) auto_increment not null,
+    name        VARCHAR(100) not null,
+    surname     VARCHAR(255),
+    email       VARCHAR(100) not null,
+    password    VARCHAR(255) not null,
+    CONSTRAINT pk_usuarios PRIMARY KEY(id) 
+) */
