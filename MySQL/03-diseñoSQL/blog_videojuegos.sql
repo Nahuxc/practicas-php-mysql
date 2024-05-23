@@ -10,8 +10,21 @@ CREATE TABLE users (
     password    VARCHAR(100) NOT NULL,
     date        DATE NOT NULL,
 
-    CONSTRAINT pk_users PRIMARY KEY(id)
-);
+    CONSTRAINT pk_users PRIMARY KEY(id),
+    CONSTRAINT uq_email UNIQUE(email)
+) ENGINE=InnoDb;
+
+
+/* podemos indicar el engine que nos permite mantener la integridad y que haya relaciones entre todas las tablas
+
+tenemos 2 tipos de ingine
+
+ENGINE=InnoDb nos permite soporte entre transacciones, tener claves ajenas, tener integridad referencial. hace que todas las claves primarias y el resto esten relacionados entre si. esto mejora el rendimiento.
+
+ENGINE=MyISAM este nos permite tener una mayor velocidad para recuperar datos o hacer consultas select etc. es mejor que innodb en ese sentido. es recomendable para aplicaciones que usan muchos select. pero lo malo es que no mantiene la integridad.
+
+
+*/
 
 
 # CREAR LA TABLA DE CATEGORIAS #
@@ -20,7 +33,7 @@ CREATE TABLE category (
     name    VARCHAR(100) NOT NULL,
 
     CONSTRAINT pk_category PRIMARY KEY(id)
-);
+) ENGINE=InnoDb;
 
 
 # CREAR LA TABLA DE ENTRADAS #
@@ -37,7 +50,7 @@ CREATE TABLE inputs (
 
     CONSTRAINT fk_inputs_user FOREIGN KEY(user_id) REFERENCES users(id),
     CONSTRAINT fk_inputs_category FOREIGN KEY(category_id) REFERENCES category(id)
-);
+)  ENGINE=InnoDb;
 
 /*
 
