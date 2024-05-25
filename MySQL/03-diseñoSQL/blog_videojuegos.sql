@@ -72,3 +72,21 @@ users(id)
 
 */
 
+
+
+
+
+/* 
+
+////// Cascade //////
+
+
+- ON DELETE CASCADE // esto indica que cuando la categoria de la entrada se borre tambien se borre el registro con cual esta registrada
+
+
+- ON UPDATE CASCADE // hace una modificacion completa en el campo junto con la tabla
+
+- ON DELETE SET NULL/DEFAULT/NO ACTION // cuando borre la categoria podemos hacer que se ponga en null o tambien en default o no action que no haga nada
+
+
+ */
