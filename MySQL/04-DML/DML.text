@@ -1,0 +1,12 @@
+ /// EL DML ("LENGUAJE DE MANIPULACION DE DATOS") ///
+
+ Es un lenguaje proporcionado por los sistemas gestores de
+ bases de datos que permite a los usuarios de la misma
+ llevar a cabo las tareas de consulta o modificacion de
+ contenido en las bases de datos del sistema gestor de bases
+ de datos.
+
+ este hoy en dia es usado en la base de dato MYSQL, usado par
+ recuperar y manipular datos en una base de datos relacional.
+
+------ INSERT, UPDATE, SELECT, DELETE -----
