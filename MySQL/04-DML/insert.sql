@@ -12,3 +12,9 @@ INSERT INTO users VALUES(null, "Jorge", "Gomez", "example@gmail.com", "124568", 
 
 
 
+
+# INSERTAR FILAS SOLO CON CIERTAS COLUMNAS en especifico #
+
+INSERT INTO users(email, password) VALUE("examplenew@gmail.com", "admin121548");
+
+/* para que esto funcione deberiamos modificar nuestras tablas porque sino no va a funcionar, indicandole a la columna de preferencia que sea solo null */
