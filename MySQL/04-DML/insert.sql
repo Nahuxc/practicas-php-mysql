@@ -41,3 +41,34 @@ SELECT email, (3+2) as "OPERACION" FROM users;
 /* si queremos ordenar las filas que tenemos podemos usar ORDER BY y por la caracteristica a ordenar */
 
 SELECT id, email FROM users ORDER BY id;
+
+
+
+
+# FUNCIONES MATEMATICAS #
+
+/* 
+- abs saca el valor absoluto de un numero 
+- ceil nos ayuda a redondear para arriba
+-floor  nos ayuda a redondear para abajo
+
+hay mas funciones que se pueden buscar en la documentacion
+
+*/
+
+SELECT abs(7) AS "OPERACION" FROM users;
+
+
+# FUNCIONES PARA TEXTOS #
+
+/* 
+
+- UPPER saca los textos en mayuscula
+- LOWER saca los textos en minuscula
+- CONCAT sirve para concatenar
+- LENGTH nos da la cantidad de caracteres
+- TRIM limpia los espacios de los textos
+ */
+
+/* estructura de uso */
+SELECT UPPER(name) FROM  users;
