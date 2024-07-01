@@ -38,3 +38,5 @@ DATABASE --> BLOG:
 - cada columna representa cada atributo que va a tener esa entidad(Usuario).
 
 - cada fila representa un objeto de esa entidad(Usuario).
+
+
