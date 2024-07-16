@@ -9,7 +9,8 @@ SELECT * FROM users;
 
 /* de esta manera insertamos usuarios */
 INSERT INTO users VALUES(null, "Jorge", "Gomez", "example@gmail.com", "124568", "2024-05-28");
-INSERT INTO users VALUES(null, "julio", "padilla", "julipadi234@gmail.com", "15453", "2024-06-02");
+INSERT INTO users VALUES(null, "martin", "lopez", "martinlopez@gmail.com", "2034", "2020-06-02");
+INSERT INTO users VALUES(null, "ian", "lomada", "ianlomada@gmail.com", "6964", "2019-06-02");
 
 
 
