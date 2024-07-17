@@ -52,3 +52,6 @@ INSERT INTO inputs VALUES(NULL, 1, 5, "Pacify STEAM", "Pacify, una niña que que
 INSERT INTO inputs VALUES(NULL, 2, 5, "Outlast STEAM", "Outlast, un manicomio enbrujado y lleno de cientificos. un investigador es enviado a hacer su trabajo", CURDATE());
 
 INSERT INTO inputs VALUES(NULL, 2, 3, "Fifa 23 PS4", "Fifa 23, Futbol y partidos con amigos disponibles para toda la comunidad", CURDATE());
+
+
+
