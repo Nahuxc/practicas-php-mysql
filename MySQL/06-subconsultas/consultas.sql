@@ -80,13 +80,35 @@ IN (SELECT user_id FROM inputs WHERE title LIKE "%fifa%");
 # SACAR TODAS LAS ENTRADAS DE LA CATEGORIA ACCION UTILIZANDO SU NOMBRE # 
 
 
-# MOSTRAR LAS CATEGORIAS CON MAS DE 3 ENTRADAS #
+
+/* 
+
+formato de lectura
+
+-sacame el titulo de todas las entradas cuya categoria id este contenida en la tabla de categoria cuando esa categoria se llame deportes 
 
 
-# MOSTRAR LOS USUARIOS QUE CREARON UNA ENTRADA UN MARTES #
+*/
+SELECT title FROM inputs WHERE category_id
+IN (SELECT id FROM category WHERE name = "deportes");
 
+
+# MOSTRAR LAS CATEGORIAS CON MAS DE 2 ENTRADAS #
+
+SELECT name FROM category WHERE id IN
+(SELECT category_id FROM inputs GROUP BY category_id HAVING COUNT(category_id) >= 2);
+
+# MOSTRAR LOS USUARIOS QUE CREARON UNA ENTRADA UN MIERCOLES #
+
+SELECT *  FROM users WHERE id IN
+(SELECT user_id FROM inputs WHERE DAYOFWEEK(date) = 4);
 
 # MOSTRAR EL NOMBRE DEL USUARIO QUE TENGA MAS ENTRADAS #
 
 
+SELECT name FROM users WHERE id =
+(SELECT user_id FROM inputs GROUP BY user_id ORDER BY COUNT(id) DESC LIMIT 1);
+
 # MOSTRAR LAS CATEGORIAS SIN ENTRADAS #
+
+SELECT * FROM category WHERE id NOT IN (SELECT category_id FROM inputs);
