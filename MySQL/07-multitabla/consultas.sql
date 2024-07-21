@@ -45,3 +45,37 @@ SELECT c.name, COUNT(i.id) c FROM category c, inputs i WHERE i.category_id = c.i
 # MOSTRAR EL MAIL DE LOS USUARIOS Y AL LADO CUANTAS ENTRADAS TIENEN #
 
 SELECT u.email, COUNT(i.id) AS "CANTIDAD DE ENTRADAS" FROM users u, inputs i WHERE i.user_id = u.id GROUP BY i.user_id;
+
+
+SELECT u.email, COUNT(i.id) AS "CANTIDAD DE ENTRADAS" FROM users u
+INNER JOIN inputs i ON i.user_id = u.id GROUP BY i.user_id;
+
+
+
+# LEFT JOIN #
+
+/* left join sirve para ver los valores de los campos y los que esten null o 0 tambien */
+SELECT u.email, COUNT(i.id) AS "CANTIDAD DE ENTRADAS" FROM users u
+LEFT JOIN inputs i ON i.user_id = u.id GROUP BY i.user_id;
+
+
+
+# RIGHT JOIN #
+
+SELECT u.email, COUNT(i.id) AS "CANTIDAD DE ENTRADAS" FROM users u
+RIGHT JOIN inputs i ON i.user_id = u.id GROUP BY i.user_id;
+
+/*
+
+- lo malo de estas tipos de consultas es que tiene que recorrer todas las tablas para poder hacerlo mas optimo usamos el innerJoin
+
+ */
+
+
+# INNER JOIN #
+
+SELECT i.id, i.title, u.name AS "AUTOR", c.name AS "categoria"
+FROM inputs i
+INNER JOIN users u ON i.user_id = u.id
+INNER JOIN category c ON i.category_id = c.id; /* une unicamente las filas que cumplan con la condicion */
+
