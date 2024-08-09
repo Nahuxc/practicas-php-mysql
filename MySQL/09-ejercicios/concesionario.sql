@@ -112,7 +112,7 @@ INSERT INTO groups VALUES(null, "Autos Model", "Parque Patricios");
 #vendedores
 
 INSERT INTO sellers VALUES(null, 2 , null, "Federico", "Gonzales", "Vendedor", CURDATE(), 2800.00 , 40.00 );
-INSERT INTO sellers VALUES(null, 2 , null, "Manuel", "Ramirez", "Repositor de Tienda", CURDATE(), 1500.00 , 500.00 );
+INSERT INTO sellers VALUES(null, 2 , 1, "Manuel", "Ramirez", "Repositor de Tienda", CURDATE(), 1500.00 , 500.00 );
 INSERT INTO sellers VALUES(null, 1 , null, "Luciano", "Martinez", "Mecanico Jefe", CURDATE(), 3000.00 , 250.00 );
 INSERT INTO sellers VALUES(null, 1 , 3, "Luciano", "Martinez", "Mecanico Asistente", CURDATE(), 1200.00 , 250.00 );
 INSERT INTO sellers VALUES(null, 3 , null, "Eric", "Gimenez", "Vendedor Avanzado", CURDATE(), 5000.00 , 1000.00 );
@@ -123,4 +123,17 @@ INSERT INTO sellers VALUES(null, 7 , 7, "Joaquin", "Peña", "Ayudante Detailer",
 
 #clientes
 
+INSERT INTO clients VALUES(null, 5, "Maria", "Rivadavia", 51000, curdate());
+INSERT INTO clients VALUES(null, 2, "Coop Auditor", "Villa crespo", 14800, curdate());
+INSERT INTO clients VALUES(null, 3, "Shopping Center", "Palermo", 18800 , curdate());
+
+INSERT INTO clients VALUES(null, 8, "Bar Monsto", "Sandy", 51000 , curdate());
+
 #encargos
+INSERT INTO orders VALUES(null, 2, 3, 2, curdate());
+INSERT INTO orders VALUES(null, 1, 6, 1, curdate());
+INSERT INTO orders VALUES(null, 3, 4, 1, curdate());
+INSERT INTO orders VALUES(null, 4, 6, 1, curdate());
+
+
+DELETE FROM orders;
