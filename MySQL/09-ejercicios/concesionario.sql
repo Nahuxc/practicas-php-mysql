@@ -130,8 +130,8 @@ INSERT INTO clients VALUES(null, 3, "Shopping Center", "Palermo", 18800 , curdat
 INSERT INTO clients VALUES(null, 8, "Bar Monsto", "Sandy", 51000 , curdate());
 
 #encargos
-INSERT INTO orders VALUES(null, 2, 3, 2, curdate());
 INSERT INTO orders VALUES(null, 1, 6, 1, curdate());
+INSERT INTO orders VALUES(null, 2, 3, 2, curdate());
 INSERT INTO orders VALUES(null, 3, 4, 1, curdate());
 INSERT INTO orders VALUES(null, 4, 6, 1, curdate());
 
