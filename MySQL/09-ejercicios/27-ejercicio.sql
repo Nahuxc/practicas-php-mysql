@@ -1,0 +1,6 @@
+/* 
+
+mostrar todos los vendedores y el numero de clientes.
+se deben mostrar tengan o no clientes
+
+ */
