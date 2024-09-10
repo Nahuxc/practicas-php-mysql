@@ -1,0 +1,6 @@
+1. clases, metodos y propiedades
+2. herencia
+3. clases estaticas, abstractas e interfaces
+4. excepciones
+5. espacios de nombres
+6. autocarga de clases
