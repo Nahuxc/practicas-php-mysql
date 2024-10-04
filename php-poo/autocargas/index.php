@@ -39,7 +39,7 @@ use MisClases\Users, MisClases\Categorias, MisClases\Entradas ; /* con PHP7 se p
 //los namespace se usan para poder organizar todo entre paquetes
 
 
-use panelAdmin\users as UsuarioAdmin;
+use panelAdmin\Users as UsuarioAdmin;
 
 
 class Controlador{
@@ -48,7 +48,6 @@ class Controlador{
     public $entradas;
 
     public function __construct(){
-        
        /*  $this->users = new Users(); */ // podemos hacerlo de esta forma pero no funcionaria si tenemos el namespace, porque poniendo el namespace le estariamos cambiando el lugar
 
 
@@ -58,7 +57,7 @@ class Controlador{
 
         //no es recomendado hacerlo de esta forma aunque sea posible ya que estamos utilizando mas espacio de codigo sin necesidad ya que esta todo en un mismo paquete
 
-        /* 
+        /*
         $this->users = new MisClases\Users("Nahuel", "martinez", "martinezfej23@gmail.com");
         $this->categorias  = new MisClases\Categorias("Accion", "Juegos de accion dentro de esta categoria", date("d-m-y"));
         $this->entradas = new MisClases\Entradas("GTA V", "Review del juego del gta V", date("d-m-y")); */
@@ -74,6 +73,18 @@ class Controlador{
 
     }
 
+    public function getUsers(){
+        return $this->users;
+    }
+
+    function informacion(){
+        /* constantes para clases y methodos */
+        echo __METHOD__."<BR>";
+        echo __CLASS__."<BR>";
+        echo __FILE__."<BR>";
+        echo __LINE__."<BR>";
+    }
+
 }
 
 
@@ -81,7 +92,7 @@ class Controlador{
 
 /* objeto controlador */
 $controlador = new Controlador();
-
+$controlador->informacion();
 
 var_dump($controlador->users);
 
@@ -91,6 +102,36 @@ var_dump($controlador->users);
 $user = new UsuarioAdmin(); // lo usamos con el nuevo alias
 
 var_dump($user);
+
+
+
+
+
+
+
+// comprobar si existe una clase Metodos
+
+/* usar el @ esconde los warnings */
+
+$clase = @class_exists("MisClases\Users");
+
+if($clase){
+    echo "existe la clase";
+}else{
+    echo "la clase no existe";
+}
+
+// metodo que nos permite buscar si existe un metodo o no (get_CLASS_methods() )
+
+$methodos = get_CLASS_methods($controlador); //devuelve todos los metodos de la clase
+
+$busqueda = array_search("getUsers", $methodos); //buscamos los metodos y comprobamos si existen o no
+
+var_dump($busqueda);
+
+
+
+
 
 
 ?>
