@@ -1,0 +1,23 @@
+1. ¿que es como funciona?
+2. implementacion
+3. controlador frontal
+4. autocarga de clases
+5. MySQLI
+6. modelos y consultas
+
+se divide en 3 partes
+
+M - Modelo es la parte de las clases o los metodos que se comunican con la DB
+V - views las vistas
+C - controlador se encarga de controlar las interacciones de los usuarios con las vistas
+
+¿ como funciona?
+
+el funcionamiento basico del patron MVC, puede resumirse en
+
+1. el usuario realiza una peticion.
+2. el controlador captura la peticion.
+3. hace la llamada al modelo correspondiente
+4. el modelo sera el encargado de interacturar con la base de datos.
+5. el controlador recibe la informacion y la envia a la vista
+6. la vista muestra la informacion
