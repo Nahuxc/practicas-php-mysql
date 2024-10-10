@@ -4,7 +4,10 @@
 
 //luego vamos al controlador donde creamos un user.php dentro de controllers
 
-class User{
+
+require_once "ModeloBase.php";
+
+class User extends ModeloBase{ //extendemos las funciones que vienen de la clase modelobase
     private $name;
     private $surname;
     private $email;
@@ -37,11 +40,6 @@ class User{
     }
     public function setPassword($password){
 
-    }
-
-
-    public function getAllUsers(){
-        echo "sacando todos los usuarios";
     }
 
 }

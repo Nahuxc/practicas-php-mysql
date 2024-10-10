@@ -7,7 +7,7 @@ class UserController{
 
 
     //un ejemplo seria esta funcion
-    function getAllUser(){
+    function getAllUsers(){
         require_once "models/user.php"; //llamamos al modelo de la clase user
 
         $user = new User();
