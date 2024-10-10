@@ -11,7 +11,7 @@ class UserController{
         require_once "models/user.php"; //llamamos al modelo de la clase user
 
         $user = new User();
-        $todos_los_usuarios = $user->getAllUsers(); //usamos el metodo que nos de los datos a requerir
+        $todos_los_usuarios = $user->getAll(); //usamos el metodo que nos de los datos a requerir
 
         //luego mandamos esos datos a las vistas donde queremos imprimirlos
         require_once "views/users/getAllUsers.php";

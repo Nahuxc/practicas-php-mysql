@@ -10,15 +10,10 @@
 
     <!-- por ultimo podemos llamarlo al index y imprimir la vista -->
 
-    <?php 
-    
-    /* controlador del usuario */
-    require_once "./controllers/user.php";
+    <?php
 
-    /* controlador de notas */
-    require_once "./controllers/nota.php";
-
-
+    /* carga de controladores con autoload */
+    require_once "autoload.php";
 
 
     //a esto se le llama controlador frontal se encarga de cargar ficheros

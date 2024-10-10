@@ -7,6 +7,12 @@ class Nota extends ModeloBase{ //extendemos las funciones que vienen de la clase
     public $title;
     public $content;
 
+    /* heredar metodos del modeloBase */
+    public function __construct(){
+        parent::__construct();
+    }
+
+
     public function getTitle(){
         return $this->title;
     }

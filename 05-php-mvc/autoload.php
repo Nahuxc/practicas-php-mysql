@@ -3,7 +3,7 @@
 
 /* auto cargado de clases */
 function app_autoLoader($pathclass){
-    include $pathclass.".php";
+    require_once "controllers/".$pathclass.".php";
 }
 
 

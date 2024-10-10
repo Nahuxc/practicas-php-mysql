@@ -13,6 +13,12 @@ class User extends ModeloBase{ //extendemos las funciones que vienen de la clase
     private $email;
     private $password;
 
+    /* heredar metodos del modeloBase */
+    public function __construct(){
+        parent::__construct();
+    }
+
+
     public function getName(){
         return $this->name;
     }
