@@ -9,5 +9,9 @@ $url = substr($urlPath, strlen($folderPath)); /* obtenemos lo que pasamos por la
 define("URL", $url); /* definimos una constante para la url */
 
 
+/* url para links de css o js */
+define("URL_PATH", $folderPath);
+
+
 
 ?>
