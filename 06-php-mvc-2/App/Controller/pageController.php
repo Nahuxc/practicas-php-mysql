@@ -13,31 +13,36 @@ http://localhost/page/modificar -> llamado de metodo
 
 /* esta clase se va a estar encargando de ejecutar los metodos */
 
-class PageController{
+class PageController extends Controller{
 
     function home(){
         // echo "estamos en el Metodo Home";
-        require_once(__DIR__."/../Views/home.view.php");
+        // require_once(__DIR__."/../Views/home.view.php");
+        $this->render("home"); // usamos el metodo de la clase Controller desde core el archivo controller para manejar las vistas
     }
 
     function listar(){
-        echo "estamos en el Metodo Listar";
-        require_once(__DIR__."/../Views/listar.view.php");
+        // echo "estamos en el Metodo Listar";
+        // require_once(__DIR__."/../Views/listar.view.php");
+        $this->render("listar"); // usamos el metodo de la clase Controller desde core el archivo controller para manejar las vistas
     }
 
     function nuevo(){
-        echo "estamos en el Metodo Nuevo";
-        require_once(__DIR__."/../Views/nuevo.view.php");
+        // echo "estamos en el Metodo Nuevo";
+        // require_once(__DIR__."/../Views/nuevo.view.php");
+        $this->render("nuevo"); // usamos el metodo de la clase Controller desde core el archivo controller para manejar las vistas
     }
 
     function modificar(){
-        echo "estamos en el Metodo modificar";
-        require_once(__DIR__."/../Views/modificar.view.php");
+        // echo "estamos en el Metodo modificar";
+        // require_once(__DIR__."/../Views/modificar.view.php");
+        $this->render("modificar"); // usamos el metodo de la clase Controller desde core el archivo controller para manejar las vistas
     }
 
     function eliminar(){
-        echo "estamos en el Metodo modificar";
-        require_once(__DIR__."/../Views/eliminar.view.php");
+        // echo "estamos en el Metodo modificar";
+        // require_once(__DIR__."/../Views/eliminar.view.php");
+        $this->render("eliminar"); // usamos el metodo de la clase Controller desde core el archivo controller para manejar las vistas
     }
 
 
