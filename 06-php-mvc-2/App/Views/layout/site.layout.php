@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php 
+    <?php  
     
     /* vamos enviar el contenido de las vistas atraves de esta variable */
     echo $content; // de esta forma se cargarian todas las vistas que vayamos teniendo para renderizar
