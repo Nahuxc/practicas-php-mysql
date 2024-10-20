@@ -1,0 +1,27 @@
+* Introduccion al PHP PDO *
+
+¿que es PDO? (PHP data object)
+
+la " extension " objetos de datos de php (PDO por sus siglas en ingles) define un interfaz
+ligera para poder acceder a bases de datos en PHP. Cada controlador de bases de datos que
+implemente la interfaz PDO puede exponer caracteristicas especificas de la base de datos
+como las funciones habituales de la extencion. Se ha de observar que no se puede realizar ninguna de las funciones
+de las bases de datos utilizando la extension PDO por si misma; se debe utilizar un controlador de PDO especifico
+de la base de datos para tener acceso a un servidor de bases de datos.
+
+PDO proporciona una capa de abstraccion de acceso a datos, lo que significa que, independientemente de la base de datos
+que se este utilizando, se emplean las mismas funciones para realizar consultas y obtener datos. PDO no proporciona una
+abstraccion de bases de datos; no reescribe SQL ni emula caracteristicas ausentes. Se deberia usar una capa de abstraccion
+totalmente desarrollada si fuera necesaria tal capacidad.
+
+con PDO nos facilita el hecho de conectarnos a distintas bases de datos y obtener sus consultas.
+
+---------------------------
+
+- es orientado a objetos
+- trabaja con multiples bases de datos
+- contiene una capa de acceso a los datos
+- seguridad / sentencias preparadas (prepared statements)
+- usabilidad
+- re usabilidad
+- excelente para el manejo de errores
