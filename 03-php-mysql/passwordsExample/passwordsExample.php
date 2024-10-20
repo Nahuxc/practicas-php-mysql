@@ -30,7 +30,7 @@ luego estos datos enviados del formulario podemos guardarlos de la siguiente man
 $sql =  "INSERT INTO users VALUES(null, $name, $email, $password, curdate()); ";
 
 
-$querySave = mysqli_query($db)
+$querySave = mysqli_query($db);
 
 
 

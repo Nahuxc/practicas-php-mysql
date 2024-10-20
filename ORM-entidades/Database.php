@@ -12,7 +12,7 @@ class Database{
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ];
 
-        $this->connection = new PDO("mysql:host-localhost;dbname=orm_db", "root", "");
+        $this->connection = new PDO("mysql:host=localhost;dbname=orm_db", "root", "");
 
         $this->connection->exec("SET CHARACTER SET UTF8");
 

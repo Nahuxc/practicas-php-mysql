@@ -47,6 +47,8 @@ $query = $pdo->query("SELECT * FROM users")->fetchAll(PDO::FETCH_OBJ);
 // EJEMPLO 1 - con el PDO esto hace que nos deje acceder de manera de objeto
 foreach($query as $value ){
     echo $value->name."<br>";
+    echo $value->surname."<br>";
+    echo $value->email."<br>";
 }
 
 
@@ -75,7 +77,7 @@ var_dump($users);
 
 // otro uso de parametros posicional
 
-$query4 = "SELECT * FROM users WHERE name = :name "; // es como pasarle un comodin
+$query4 = "SELECT * FROM users WHERE name = :name "; // es como pasarle un comodin :name para que lo reciba luego en el execute
 
 //hacemos un prepare de la consulta a ejecutar
 $stmt2 = $pdo->prepare($query4);
@@ -94,6 +96,9 @@ foreach($users2 as $user){
     echo $user->name;
 
 }
+
+//accedemos a la cantidad de usuarios registrados por columna
+$totalusers = $stmt->rowCount();
 
 
 
