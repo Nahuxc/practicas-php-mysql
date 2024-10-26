@@ -11,7 +11,7 @@ class Router{
     }
 
     public function matchRoute(){
-        $url = explode("/", URL); //explote lo que hace es separar una cadena de texto por un separador en este caso un /
+        $url = explode("/", URL); //explode lo que hace es separar una cadena de texto por un separador en este caso un /
 
         /* indicamos en que posicion del arreglo se va a encontrar el controlador en la url y el metodo en la url */
         $this->controller = !empty($url[1]) ? $url[1] : "page"; //  devuelve /page

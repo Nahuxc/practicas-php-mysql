@@ -4,3 +4,85 @@
 4. excepciones
 5. espacios de nombres
 6. autocarga de clases
+
+
+
+
+
+
+
+
+
+
+
+
+----------- ABSTRACCION -------------
+
+
+NOMBRE DE LA CLASE: USUARIO
+
+PROPIEDADES:
+
+-Nombre
+-Apellido
+-Edad
+-Direccion
+
+DEFINIR FUNCIONALIDADES: METODOS
+
+- Registrarse();
+- iniciarSesion();
+- EditarPerfil();
+- CerrarSesion();
+
+
+------- HERENCIA -------
+
+tenemos las propiedades de las 2 clases
+
+
+estas 2 clases tienen propiedades similares entonces podemos aplicar la herencia
+
+CLASE->EMPLEADO
+
+-Nombre
+-Apellido
+-Edad
+-Puesto
+-Sueldo
+-Tipo de contrato
+
+
+
+CLASE->CLIENTE
+
+-identificacion
+-Nombre
+-Apellido
+-Edad
+-Codigo
+-Categoria
+
+
+* DE ESTA MANERA PODEMOS HACER QUE LAS DEMAS CLASES HEREDEN
+LAS PROPIEDADES DE PERSONA Y ASI NO REPETIR LO MISMO EN LAS OTRAS CLASES
+
+SUPER CLASE : PERSONA
+- identificacion
+- Nombre
+- Apellido
+- Edad
+
+
+SUB-CLASES
+
+CLASE EMPLEADO se extiende de la clase PERSONA - APLICAMOS HERENCIA DE LA CLASE PERSONA
+
+- Puesto
+- Sueldo
+- Tipo de contrato
+
+CLASE CLIENTE se extiende de la clase PERSONA - APLICAMOS HERENCIA DE LA CLASE PERSONA
+
+-Codigo
+-Categoria
