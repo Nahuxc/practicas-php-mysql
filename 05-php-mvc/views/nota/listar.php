@@ -1,4 +1,11 @@
-<div>
-    <h1> <?=$nota->getTitle();?> </h1>
-    <p> <?=$nota->getContent();?> </p>
-</div>
+
+
+<h1>Listado de notas:</h1>
+
+<?php
+
+while($nota = $notas->fetch_object()) : ?>
+
+    <?= $nota->title?> - <?= $nota->content?> - <?= $nota->date?>
+
+<?php endwhile;?>

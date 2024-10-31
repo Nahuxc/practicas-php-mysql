@@ -1,0 +1,9 @@
+cosas a utilizar de librerias de PHP
+
+
+1. Composer
+2. Generar PDF
+3. Crear Paginacion
+4. Manipular Imagenes
+5. FirePHP
+6. Investigacion de como implementar cualquier librerias

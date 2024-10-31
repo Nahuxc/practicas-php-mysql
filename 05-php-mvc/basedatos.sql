@@ -19,7 +19,7 @@ CREATE TABLE users(
 
 CREATE TABLE notes(
 
-    id          INT(255) not null,
+    id          INT(255) auto_increment not null,
     user_id     INT(100) not null,
     title       VARCHAR(255) not null,
     content     VARCHAR(255) not null,

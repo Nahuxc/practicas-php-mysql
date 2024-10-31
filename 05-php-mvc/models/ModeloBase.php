@@ -13,11 +13,9 @@ class ModeloBase{
         $this->db = database::connect();
     }
 
-    function getAll(){
-        echo "<pre>";
-        var_dump($this->db);
-        echo "</pre>";
-        echo "sacando todas las notas";
+    function getAll($tabla){
+        $query = $this->db->query("SELECT * FROM $tabla ORDER BY id DESC ");
+        return $query;
     }
 
 

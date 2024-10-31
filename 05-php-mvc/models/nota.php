@@ -29,6 +29,9 @@ class Nota extends ModeloBase{ //extendemos las funciones que vienen de la clase
         $this->content = $content;
     }
 
+    public function saveNote(){
+
+    }
 
 
 }
